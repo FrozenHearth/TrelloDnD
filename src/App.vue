@@ -33,4 +33,8 @@ body {
 :root {
   font-size: 10px;
 }
+.drop-preview {
+  background-color: rgba(150, 150, 200, 0.1);
+  margin: 1rem 2rem 1rem 0.3rem;
+}
 </style>

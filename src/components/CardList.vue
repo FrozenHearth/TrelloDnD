@@ -1,6 +1,9 @@
 <template>
   <div class="card-list-container">
     <Container
+      drag-class="card-ghost"
+      drop-class="card-ghost-drop"
+      :drop-placeholder="dropPlaceholderOptions"
       :get-child-payload="getChildPayload1"
       group-name="1"
       @drop="onDrop('listOne', $event)"
@@ -10,6 +13,9 @@
       </Draggable>
     </Container>
     <Container
+      drag-class="card-ghost"
+      drop-class="card-ghost-drop"
+      :drop-placeholder="dropPlaceholderOptions"
       :get-child-payload="getChildPayload2"
       group-name="1"
       @drop="onDrop('listTwo', $event)"
@@ -19,6 +25,9 @@
       </Draggable>
     </Container>
     <Container
+      drag-class="card-ghost"
+      drop-class="card-ghost-drop"
+      :drop-placeholder="dropPlaceholderOptions"
       :get-child-payload="getChildPayload3"
       group-name="1"
       @drop="onDrop('listThree', $event)"
@@ -28,6 +37,9 @@
       </Draggable>
     </Container>
     <Container
+      drag-class="card-ghost"
+      drop-class="card-ghost-drop"
+      :drop-placeholder="dropPlaceholderOptions"
       :get-child-payload="getChildPayload4"
       group-name="1"
       @drop="onDrop('listFour', $event)"
@@ -52,6 +64,11 @@ export default {
   },
   data() {
     return {
+      dropPlaceholderOptions: {
+        className: "drop-preview",
+        animationDuration: "150",
+        showOnTop: false,
+      },
       listOne: [
         {
           id: 0,
@@ -164,5 +181,13 @@ export default {
   margin-top: 5rem;
   margin-right: 2.5rem;
   margin-left: 1rem;
+}
+.card-ghost {
+  transition: transform 0.18s ease;
+  transform: rotateZ(5deg);
+}
+.card-ghost-drop {
+  transition: transform 0.18s ease-in-out;
+  transform: rotateZ(0deg);
 }
 </style>
