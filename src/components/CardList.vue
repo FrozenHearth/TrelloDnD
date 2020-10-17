@@ -1,22 +1,38 @@
 <template>
   <div class="card-list-container">
-    <Container @drop="onDrop('listOne', $event)">
-      <Draggable v-for="item in listOne" :key="item.id">
+    <Container
+      :get-child-payload="getChildPayload1"
+      group-name="1"
+      @drop="onDrop('listOne', $event)"
+    >
+      <Draggable v-for="(item, $index) in listOne" :key="$index">
         <Card :item="item" />
       </Draggable>
     </Container>
-    <Container @drop="onDrop('listTwo', $event)">
-      <Draggable v-for="item in listTwo" :key="item.id">
+    <Container
+      :get-child-payload="getChildPayload2"
+      group-name="1"
+      @drop="onDrop('listTwo', $event)"
+    >
+      <Draggable v-for="(item, $index) in listTwo" :key="$index">
         <Card :item="item" />
       </Draggable>
     </Container>
-    <Container @drop="onDrop('listThree', $event)">
-      <Draggable v-for="item in listThree" :key="item.id">
+    <Container
+      :get-child-payload="getChildPayload3"
+      group-name="1"
+      @drop="onDrop('listThree', $event)"
+    >
+      <Draggable v-for="(item, $index) in listThree" :key="$index">
         <Card :item="item" />
       </Draggable>
     </Container>
-    <Container @drop="onDrop('listFour', $event)">
-      <Draggable v-for="item in listFour" :key="item.id">
+    <Container
+      :get-child-payload="getChildPayload4"
+      group-name="1"
+      @drop="onDrop('listFour', $event)"
+    >
+      <Draggable v-for="(item, $index) in listFour" :key="$index">
         <Card :item="item" />
       </Draggable>
     </Container>
@@ -113,6 +129,18 @@ export default {
   methods: {
     onDrop(collection, dropResult) {
       this[collection] = applyDrag(this[collection], dropResult);
+    },
+    getChildPayload1(index) {
+      return this.listOne[index];
+    },
+    getChildPayload2(index) {
+      return this.listTwo[index];
+    },
+    getChildPayload3(index) {
+      return this.listThree[index];
+    },
+    getChildPayload4(index) {
+      return this.listFour[index];
     },
   },
 };
