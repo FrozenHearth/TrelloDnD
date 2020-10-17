@@ -22,6 +22,7 @@ export default {
   background: #fff;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
   width: 100%;
+  border-radius: 3px;
   cursor: pointer;
   margin-bottom: 2rem;
 }
