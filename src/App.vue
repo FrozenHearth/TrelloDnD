@@ -1,9 +1,6 @@
 <template>
   <div id="app">
     <CardList />
-    <!-- <CardList />
-    <CardList />
-    <CardList /> -->
   </div>
 </template>
 
