@@ -2,9 +2,7 @@
   <div class="card-container">
     <div class="card-body">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam.
+        {{ item.text }}
       </p>
     </div>
   </div>
@@ -13,6 +11,9 @@
 <script>
 export default {
   name: "Card",
+  props: {
+    item: Object,
+  },
 };
 </script>
 
@@ -21,7 +22,6 @@ export default {
   background: #fff;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
   width: 100%;
-  height: 100%;
   cursor: pointer;
   margin-bottom: 2rem;
 }
