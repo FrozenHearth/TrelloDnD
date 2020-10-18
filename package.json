@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "surge": "^0.21.6",
     "vue": "^2.6.11",
     "vue-smooth-dnd": "^0.8.1"
   },
