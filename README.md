@@ -14,5 +14,6 @@ npm run serve
 
 ## [Demo](https://trello-dnd.surge.sh/)
 
+https://trello-dnd.surge.sh/
 
 ![gif](https://j.gifs.com/NLq8vK.gif)
