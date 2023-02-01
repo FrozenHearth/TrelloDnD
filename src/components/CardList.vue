@@ -66,3 +66,32 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.card-list-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.smooth-dnd-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  max-width: 40%;
+  flex: 0 0 40%;
+  height: 100%;
+  border: 1px solid #dcebf4;
+  border-radius: 6px;
+  padding: 1rem 1rem 0 1rem;
+  margin-top: 5rem;
+  margin-right: 2.5rem;
+  margin-left: 1rem;
+}
+.card-ghost {
+  transition: transform 0.18s ease;
+  transform: rotateZ(5deg);
+}
+.card-ghost-drop {
+  transition: transform 0.18s ease-in-out;
+  transform: rotateZ(0deg);
+}
+</style>
