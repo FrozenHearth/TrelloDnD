@@ -1,12 +1,15 @@
 export const applyDrag = (arr, { removedIndex, addedIndex, payload }) => {
   if (removedIndex === null && addedIndex === null) return arr;
+  let itemToAdd = payload;
   const result = [...arr];
-  
+
   if (removedIndex !== null) {
-    
-    // remove the element at removedIndex and insert it at addedIndex
-    result.splice(addedIndex, 0, result.splice(removedIndex, 1, payload)[0]);
+    itemToAdd = result.splice(removedIndex, 1)[0];
   }
-  
+
+  if (addedIndex !== null) {
+    result.splice(addedIndex, 0, itemToAdd);
+  }
+
   return result;
 };

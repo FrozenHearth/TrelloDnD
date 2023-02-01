@@ -1,7 +1,7 @@
 <template>
   <div class="card-container">
     <div class="card-body">
-      <p>
+      <p class="card-body--text">
         {{ item.text }}
       </p>
     </div>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "Card",
+  name: 'Card',
   props: {
     item: Object,
   },
@@ -29,7 +29,7 @@ export default {
 .card-body {
   padding: 1rem 2rem;
 }
-p {
+.card-body--text {
   font-size: 1.6rem;
 }
 </style>
