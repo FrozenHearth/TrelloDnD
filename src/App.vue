@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import CardList from "./components/CardList.vue";
+import CardList from './components/CardList.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     CardList,
   },
@@ -20,10 +20,7 @@ body {
   background: #f6f9fc;
 }
 #app {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
