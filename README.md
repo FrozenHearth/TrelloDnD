@@ -3,13 +3,13 @@
 Clone the repo & run
 
 ```
-npm install
+npm install or yarn
 ```
 
 Start the app with
 
 ```
-npm run serve
+npm run serve or yarn serve
 ```
 
 ## [Demo](https://trello-dnd.surge.sh/)
